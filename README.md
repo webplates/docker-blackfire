@@ -10,6 +10,15 @@ Currently supported PHP versions:
 - 7.0
 
 
+## Install
+
+Via Composer
+
+``` bash
+$ docker pull webplates/blackfire-cli
+```
+
+
 ## Usage
 
 First of all you need to get your Client credentials from https://blackfire.io/account.
@@ -33,3 +42,11 @@ alias bf='docker run --rm -t -v "$PWD":/app -e BLACKFIRE_CLIENT_ID=$BLACKFIRE_CL
 Then simply do `bf script.php`.
 
 **Note:** since volume mapping is used to get the files inside the container, it only works when called from the project root, it cannot access parent directories.
+
+
+To see how CLI profiling with Blackfire works check the [official documentation](https://blackfire.io/docs/cookbooks/profiling-cli).
+
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
