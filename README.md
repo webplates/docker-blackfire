@@ -10,15 +10,6 @@ Currently supported PHP versions:
 - 7.0
 
 
-## Install
-
-Via Composer
-
-``` bash
-$ docker pull webplates/blackfire-cli
-```
-
-
 ## Usage
 
 First of all you need to get your Client credentials from https://blackfire.io/account.
