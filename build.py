@@ -24,7 +24,7 @@ paths = []
 tags = []
 
 # Initialize template
-template = env.get_template('Dockerfile.template')
+template = env.get_template("Dockerfile.template")
 
 for image in MATRIX:
     path = DIST + "/" + matrix_join((minorize(image),), "/")
