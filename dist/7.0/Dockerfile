@@ -2,7 +2,9 @@ FROM php:7.0.11
 
 WORKDIR /app
 
-RUN set -ex \
+RUN set -xe \
+    && curl -A "Docker" -o /usr/bin/blackfire -D - -L -s https://packages.blackfire.io/binaries/blackfire-agent/1.8.0/blackfire-cli-linux_static_amd64 \
+    && chmod +x /usr/bin/blackfire \
     && version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
     && curl -A "Docker" -o /tmp/blackfire-probe.tar.gz -D - -L -s https://blackfire.io/api/v1/releases/probe/php/linux/amd64/$version \
     && tar zxpf /tmp/blackfire-probe.tar.gz -C /tmp \

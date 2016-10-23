@@ -5,7 +5,7 @@ import shutil
 from helper import *
 
 DIST = "dist"
-REPO = "webplates/blackfire-probe"
+REPO = "webplates/blackfire-cli"
 
 VERSIONS = ["5.6.26", "7.0.11"]
 
