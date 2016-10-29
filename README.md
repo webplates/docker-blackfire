@@ -19,7 +19,7 @@ You can then pass them as environment variables to the Blackfire client and run 
 ``` bash
 $ export BLACKFIRE_CLIENT_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 $ export BLACKFIRE_CLIENT_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-$ docker run --rm -t -v "$PWD":/app -e BLACKFIRE_CLIENT_ID=$BLACKFIRE_CLIENT_ID -e BLACKFIRE_CLIENT_TOKEN=$BLACKFIRE_CLIENT_TOKEN webplates/blackfire-cli blackfire run php script.php
+$ docker run --rm -it -v "$PWD":/app -e BLACKFIRE_CLIENT_ID=$BLACKFIRE_CLIENT_ID -e BLACKFIRE_CLIENT_TOKEN=$BLACKFIRE_CLIENT_TOKEN webplates/blackfire-cli blackfire run php script.php
 ```
 
 If you want a more permanent solution, add the following to your shell config (`.bashrc`, `.zshrc`, etc):
@@ -27,7 +27,7 @@ If you want a more permanent solution, add the following to your shell config (`
 ``` bash
 export BLACKFIRE_CLIENT_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 export BLACKFIRE_CLIENT_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-alias bf='docker run --rm -t -v "$PWD":/app -e BLACKFIRE_CLIENT_ID=$BLACKFIRE_CLIENT_ID -e BLACKFIRE_CLIENT_TOKEN=$BLACKFIRE_CLIENT_TOKEN webplates/blackfire-cli blackfire run php'
+alias bf='docker run --rm -it -v "$PWD":/app -e BLACKFIRE_CLIENT_ID=$BLACKFIRE_CLIENT_ID -e BLACKFIRE_CLIENT_TOKEN=$BLACKFIRE_CLIENT_TOKEN webplates/blackfire-cli blackfire run php'
 ```
 
 Then simply do `bf script.php`.
